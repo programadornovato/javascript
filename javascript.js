@@ -1,3 +1,30 @@
+/*
+let edad=51;
+if ( edad >= 18 && edad <=50 ){
+    console.log('Contratado');
+}
+else{
+    console.log('No Contratado');
+}
+*/
+/*
+let ubicacion='CH';
+if(ubicacion=='CH' || ubicacion=='NY' ){
+    console.log('Contratado');
+}
+else{
+    console.log('No Contratado');
+}
+*/
+let falimiar=false;
+if(falimiar){
+    console.log('Contratado');
+}
+else{
+    console.log('No Contratado');
+}
+
+/*
 //alert('Hola mundo');
 var numero1=5;
 var numero2=15;
@@ -24,4 +51,4 @@ numeroCuatro--;
 numeroCuatro--;
 //alert(numeroCuatro);
 console.log(numeroCuatro);
-
+*/
