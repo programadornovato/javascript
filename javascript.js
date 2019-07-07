@@ -1,54 +1,24 @@
 /*
-let edad=51;
-if ( edad >= 18 && edad <=50 ){
-    console.log('Contratado');
-}
-else{
-    console.log('No Contratado');
-}
+var array=[1,2,3,"hola",true,false];
+//         0,1,2,3
+console.log(array[0]);
+console.log(array[1]);
+console.log(array[2]);
+console.log(array[3]);
 */
-/*
-let ubicacion='CH';
-if(ubicacion=='CH' || ubicacion=='NY' ){
-    console.log('Contratado');
-}
-else{
-    console.log('No Contratado');
-}
-*/
-let falimiar=false;
-if(falimiar){
-    console.log('Contratado');
-}
-else{
-    console.log('No Contratado');
-}
-
-/*
-//alert('Hola mundo');
-var numero1=5;
-var numero2=15;
-var cadena='hola mundo';
-var res=numero1+numero2;
-//alert(typeof(res));
-//var numeroUno=100;
-//var numeroUno='Hola mundo';
-//alert(numeroUno);
-
-let numeroUno=100;
-numeroUno='Hola mundo';
-//alert(numeroUno);
-
-const numeroTres=333;
-//numeroTres=3;
-//alert(numeroTres);
-
-let numeroCuatro=44;
-//numeroCuatro=numeroCuatro+1;
-numeroCuatro--;
-numeroCuatro--;
-numeroCuatro--;
-numeroCuatro--;
-//alert(numeroCuatro);
-console.log(numeroCuatro);
-*/
+let colores=new Array("rojo","azul","verde");
+//console.log(colores[0]);
+console.log(colores);
+//console.log(colores.toString());
+//console.log(colores.length);
+//colores.length=2;
+//colores[colores.length]="amarillo";
+//colores.push("amarillo");
+//colores.pop();
+//console.log(colores.shift());
+//colores.unshift("blanco");
+//colores.reverse();
+//colores.sort();
+//var colores2=colores.slice(2);
+colores.splice(1,2,"violeta","morado");
+console.log(colores);
