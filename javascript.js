@@ -1,26 +1,29 @@
-
-var array=[];
-//         0,1,2,3
+var accion = "raiz";
 /*
-for (var i=0;i<array.length;i++){
-    console.log(array[i]);
+if(accion=="suma"){
+    console.log("se suma");
+}
+if(accion=="resta"){
+    console.log("se resta");
 }
 */
-/*
-var i=0;
-while(i<array.length){
-    console.log(array[i]);
-    i++;
-}
-*/
+switch (accion) {
+    case "suma":
+        console.log("se suma");
+        break;
+    case "resta":
+        console.log("se resta");
+        break;
 
-var i=0;
-do{
-    if(array[i]==null){
-        console.log('No ha elementos');
-    }
-    else{
-        console.log(array[i]);
-    }
-    i++;
-}while(i<array.length);
+    case "mul":
+        console.log("se multiplica");
+        break;
+
+    case "div":
+        console.log("se divide");
+        break;
+    default:
+        console.log("no se encontro nada");
+
+
+}
