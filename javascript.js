@@ -1,68 +1,18 @@
-
+let nombre=document.getElementById('nombre');
 /*
-let titulo=document.getElementById('titulo');
-//console.log(titulo);
-titulo.style.color="red";
-titulo.innerHTML="Nuevo texto";
-titulo.style.background="blue";
-
-document.getElementById('parrafo').style.color="green";
-*/
-let boton = document.getElementById('boton');
-/*
-boton.onclick=function(){
-    alert('hola desde aqui');
+function retornaNombre(nombre){
+    return 'Hola '+nombre;
 }
 */
+let retornaNombre = nombre => 'Hola '+nombre;
+nombre.innerHTML=retornaNombre('novato');
+
+
+let nombres=document.getElementById('nombres');
 /*
-boton.onclick = evento;
-function evento() {
-    let titulo = document.getElementById('titulo');
-    //console.log(titulo);
-    titulo.style.color = "red";
+function retornaNombres(nombre,apellido){
+    return 'Hola '+nombre+apellido;
 }
 */
-/*
-boton.addEventListener('mouseover',function(){
-    console.log('mouseover');
-});
-boton.addEventListener('mouseout',function(){
-    console.log('mouseout');
-});
-*/
-/*
-let parrafos=document.getElementsByClassName('parrafos');
-console.log(parrafos[1]);
-*/
-let parrafos=document.querySelectorAll('p');
-console.log(parrafos[1]);
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+let retornaNombres = (nombre,apellido) => nombre+' '+apellido;
+nombres.innerHTML+=' '+retornaNombres('Programador','novato');
