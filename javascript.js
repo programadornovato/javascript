@@ -1,31 +1,68 @@
-//let i=8;
-/*
-let edad=55;
-edad=55;
-console.log(edad);
-*/
 
 /*
-for(let i=0;i<4;i++){
-    console.log(i);
+let titulo=document.getElementById('titulo');
+//console.log(titulo);
+titulo.style.color="red";
+titulo.innerHTML="Nuevo texto";
+titulo.style.background="blue";
+
+document.getElementById('parrafo').style.color="green";
+*/
+let boton = document.getElementById('boton');
+/*
+boton.onclick=function(){
+    alert('hola desde aqui');
 }
-console.log("afuera del for "+i);
 */
 /*
-let i=7;
-if(true){
-    let i=5;
-    console.log(i);
+boton.onclick = evento;
+function evento() {
+    let titulo = document.getElementById('titulo');
+    //console.log(titulo);
+    titulo.style.color = "red";
 }
-console.log(i);
 */
 /*
-const num=5;
-console.log(num);
+boton.addEventListener('mouseover',function(){
+    console.log('mouseover');
+});
+boton.addEventListener('mouseout',function(){
+    console.log('mouseout');
+});
 */
-const arreglo=[1,2,3];
-//arreglo[3]=4;
-arreglo.push(4);
-console.log(arreglo);
+/*
+let parrafos=document.getElementsByClassName('parrafos');
+console.log(parrafos[1]);
+*/
+let parrafos=document.querySelectorAll('p');
+console.log(parrafos[1]);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
