@@ -1,45 +1,31 @@
-var accion = "div";
-var numero1 = 10;
-var numero2 = 0;
-switch (accion) {
-    case "suma":
-        console.log("La suma es " + suma(numero1, numero2));
-        break;
-    case "resta":
-        console.log("La resta es " + resta(numero1, numero2));
-        break;
+//let i=8;
+/*
+let edad=55;
+edad=55;
+console.log(edad);
+*/
 
-    case "mul":
-        console.log("La mul es " + mul(numero1, numero2));
-        break;
+/*
+for(let i=0;i<4;i++){
+    console.log(i);
+}
+console.log("afuera del for "+i);
+*/
+/*
+let i=7;
+if(true){
+    let i=5;
+    console.log(i);
+}
+console.log(i);
+*/
+/*
+const num=5;
+console.log(num);
+*/
+const arreglo=[1,2,3];
+//arreglo[3]=4;
+arreglo.push(4);
+console.log(arreglo);
 
-    case "div":
-            console.log("La div es " + div(numero1, numero2));
-        break;
-    default:
-        console.log("no se encontro nada");
-}
-function suma(num1, num2) {
-    return num1 + num2;
-}
-function resta(num1, num2) {
-    if (num2 >= num1) {
-        return "El numero 2 no puede ser mayor al numero 1";
-    }
-    else {
-        return num1 - num2;
-    }
 
-}
-function mul(num1, num2) {
-    return num1 * num2;
-}
-function div(num1, num2) {
-    if(num2==0){
-        return "Numero 2 no puede ser 0";
-    }
-    else{
-        return num1 / num2;
-    }
-    
-}
