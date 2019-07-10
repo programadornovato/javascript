@@ -1,44 +1,17 @@
-/*
-let arragle=[1,2,3,'hola'];
-console.log(arragle);
+let key="AIzaSyD-tT6sIqfOzIDjcTaC2elgXOwmCzkss1A";
+let idCanal="UCekiUWTObDKZnaeS-reYQbg";
+let resPorPagina=25;
+let url="https://www.googleapis.com/youtube/v3/search?key=" + key + "&channelId=" + idCanal + "&part=snippet,id&order=date&maxResults=" + resPorPagina;
 
-let objeto={
-    nombre:'juan',
-    puesto:'programador',
-    edad:20,
-    proyectos:{
-        nombre:'tienda',
-        version:1.5,
-        des:'Una tienda online'
+let xmlhttp=new XMLHttpRequest();
+xmlhttp.open('GET',url,true);
+xmlhttp.send();
+xmlhttp.onreadystatechange=function(){
+    if(this.readyState==4 && this.status==200){
+        let data=JSON.parse(this.responseText);
+        console.log(data);
+        for(var i=0;i<data.items.length;i++){
+            console.log(data.items[i].snippet.title);
+        }
     }
 }
-console.log(objeto.proyectos.nombre);
-*/
-let objetos=[
-    {
-        nombre:'juan',
-        puesto:'programador',
-        edad:20    
-    },
-    {
-        nombre:'maria',
-        puesto:'programador',
-        edad:25    
-    },
-    {
-        nombre:'juana',
-        puesto:'programador',
-        edad:22    
-    }
-];
-/*
-console.log(objetos[0].nombre);
-console.log(objetos[1].nombre);
-console.log(objetos[2].nombre);
-*/
-for(let i=0;i<objetos.length;i++){
-    console.log(objetos[i].nombre+' '+objetos[i].puesto);
-}
-
-
-
