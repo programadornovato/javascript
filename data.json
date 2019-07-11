@@ -1,0 +1,26 @@
+[
+    {
+        "id":1,
+        "nombre":"juan",
+        "puesto":"sistemas",
+        "estado":true
+    },
+    {
+        "id":1,
+        "nombre":"maria",
+        "puesto":"sistemas",
+        "estado":true
+    },
+    {
+        "id":1,
+        "nombre":"elena",
+        "puesto":"contabilidad",
+        "estado":true
+    },
+    {
+        "id":1,
+        "nombre":"pepe",
+        "puesto":"contabilidad",
+        "estado":true
+    }
+]
