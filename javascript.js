@@ -1,8 +1,9 @@
 document.getElementById('boton').onclick=function(){
-    fetch('archivo.txt')
-    .then(data=>data.text())
+    fetch('https://randomuser.me/api')
+    .then(data=>data.json())
     .then(data=>{
         //console.log(data);
-        document.getElementById('con').innerHTML=data;
+        document.getElementById('imagen').src=data.results[0].picture.large;
+        document.getElementById('nombre').innerHTML=data.results[0].name.first;
     })
 }
