@@ -1,16 +1,30 @@
-document.getElementById('boton').onclick=function(){
-    fetch('data.json')
-    .then(data=>data.json())
-    .then(data=>{
-        console.log(data);
-        for(var i=0;i<data.length;i++){
-            document.getElementById('registros').innerHTML=document.getElementById('registros').innerHTML+
-            "<tr>"+
-                "<td scope='row'>"+data[i].id+"</td>"+
-                "<td>"+data[i].nombre+"</td>"+
-                "<td>"+data[i].puesto+"</td>"+
-                "<td>"+data[i].estado+"</td>"+
-            "</tr>";
-        }
-    })
+/*
+let nom="maria";
+function personal(nombre,puesto) {
+    console.log("nombre="+nombre+" puesto="+puesto);
 }
+personal("eugenio","programador");
+*/
+class Personal{
+    constructor(nombre,puesto, fechaContrato){
+        this.nombre=nombre;
+        this.puesto=puesto;
+        this.fecha=fechaContrato;
+        //console.log("nombre="+nombre+" puesto="+puesto);
+    }
+    calculaAnos() {
+        let hoy = new Date();
+        let cumpleanos = new Date(this.fecha);
+        let anos = hoy.getFullYear() - cumpleanos.getFullYear();
+        let m = hoy.getMonth() - cumpleanos.getMonth();
+        if (m < 0 || (m === 0 && hoy.getDate() < cumpleanos.getDate())) {
+            anos--;
+        }
+        return anos;
+    }
+}
+let juan=new Personal("juan","contabilidad","2010,01,01");
+console.log(juan.calculaAnos());
+
+let maria=new Personal("maria","programador","2012,01,01");
+console.log(maria.puesto);
