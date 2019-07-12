@@ -23,8 +23,36 @@ class Personal{
         return anos;
     }
 }
+class Vacaciones extends Personal{
+    constructor(nombre,puesto, fechaContrato,extra=0){
+        super(nombre,puesto, fechaContrato);
+        this.extra=extra;
+    }
+    diasVaciones(){
+        let anos=this.calculaAnos();
+        if(anos===0){
+            return 0+this.extra;
+        }
+        if(anos>=1 & anos <=5){
+            return 5+this.extra;
+        }
+        if(anos>=6 & anos <=10){
+            return 10+this.extra;
+        }
+        if(anos>=11){
+            return 12+this.extra;
+        }
+    }
+}
+/*
 let juan=new Personal("juan","contabilidad","2010,01,01");
 console.log(juan.calculaAnos());
 
 let maria=new Personal("maria","programador","2012,01,01");
 console.log(maria.puesto);
+*/
+let ana=new Vacaciones("ana","archivo","2015-01-01",2);
+console.log(ana.diasVaciones());
+
+let eugenio=new Vacaciones("eugenio","programacion","2015-01-01");
+console.log(eugenio.diasVaciones());
