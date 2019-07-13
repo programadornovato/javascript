@@ -6,19 +6,19 @@
         "estado":true
     },
     {
-        "id":1,
+        "id":2,
         "nombre":"maria",
         "puesto":"sistemas",
         "estado":true
     },
     {
-        "id":1,
+        "id":3,
         "nombre":"elena",
         "puesto":"contabilidad",
         "estado":true
     },
     {
-        "id":1,
+        "id":4,
         "nombre":"pepe",
         "puesto":"contabilidad",
         "estado":true
