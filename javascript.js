@@ -1,3 +1,10 @@
+/*
+//var variable="valor";
+localStorage.setItem("key","valor");
+let key=localStorage.getItem("key");
+console.log(key);
+*/
+
 let boton=document.getElementById('boton');
 let con=document.getElementById('con');
 let cuerpo=document.getElementById('cuerpo');
@@ -14,6 +21,16 @@ con.onclick=function(e){
     //e.preventDefault();
     //console.log(e.target.classList[1]); 
     let clase=e.target.classList[1];
+    clase=clase.replace("btn-","bg-");
+    cuerpo.className=clase;
+    localStorage.setItem("clase",clase);
+}
+let clase=localStorage.getItem("clase");
+console.log(clase);
+if(clase===null){
+    cuerpo.className="btn-danger";
+}else{
+    clase=clase.replace("btn-","bg-");
     cuerpo.className=clase;
 }
 
