@@ -1,36 +1,46 @@
-/*
-//var variable="valor";
-localStorage.setItem("key","valor");
-let key=localStorage.getItem("key");
-console.log(key);
-*/
+let personal=
+[
+    {
+        "id":1,
+        "nombre":"juan",
+        "puesto":"sistemas",
+        "estado":true
+    },
+    {
+        "id":2,
+        "nombre":"maria",
+        "puesto":"sistemas",
+        "estado":true
+    },
+    {
+        "id":3,
+        "nombre":"elena",
+        "puesto":"contabilidad",
+        "estado":true
+    },
+    {
+        "id":4,
+        "nombre":"pepe",
+        "puesto":"contabilidad",
+        "estado":true
+    }
+];
 
-let boton=document.getElementById('boton');
-let con=document.getElementById('con');
-let cuerpo=document.getElementById('cuerpo');
+let texto=document.getElementById('texto');
+let buscar=document.getElementById('buscar');
+let res=document.getElementById('res');
 
-boton.onclick=function(){
-    con.innerHTML=
-    '<button type="button" class="btn btn-primary">btn-primary</button>'+
-    '<button type="button" class="btn btn-secondary">btn-secondary</button>'+
-    '<button type="button" class="btn btn-danger">btn-danger</button>'+
-    '<button type="button" class="btn btn-success">btn-success</button>'+
-    '<button type="button" class="btn btn-warning">btn-warning</button>';
-}
-con.onclick=function(e){
-    //e.preventDefault();
-    //console.log(e.target.classList[1]); 
-    let clase=e.target.classList[1];
-    clase=clase.replace("btn-","bg-");
-    cuerpo.className=clase;
-    localStorage.setItem("clase",clase);
-}
-let clase=localStorage.getItem("clase");
-console.log(clase);
-if(clase===null){
-    cuerpo.className="btn-danger";
-}else{
-    clase=clase.replace("btn-","bg-");
-    cuerpo.className=clase;
+texto.onkeyup=fil;
+buscar.onclick=fil;
+function fil(){
+    res.innerHTML='';
+    //alert(texto.value.toLowerCase());
+    let textoMin=texto.value.toLowerCase();
+    for(var i=0;i<personal.length;i++){
+        let personalMin=personal[i].nombre.toLowerCase();
+        if (personalMin.indexOf(textoMin) !== -1){
+            res.innerHTML+='<li>'+personal[i].nombre+' de '+ personal[i].puesto +' </li>';
+        }
+    }
 }
 
