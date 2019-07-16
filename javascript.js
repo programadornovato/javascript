@@ -71,6 +71,32 @@ listaTareas.onclick=function(e){
     if(e.target.classList[1]==="fa-check"  || e.target.classList[1]==="fa-trash"  ){
         //console.log(e.target.classList[1]);
         let nombreTarea=e.target.parentNode.parentNode.querySelector('strong').innerHTML;
-        console.log(nombreTarea);
+        //console.log(nombreTarea);
+        if(e.target.classList[1]==="fa-trash"){
+            elimarDB(nombreTarea);
+        }
+        else{
+            editarDB(nombreTarea);
+        }
     }
+}
+function elimarDB(nombreTarea){
+    arrayTareas.forEach((elemento,index)=>{
+        //console.log(elemento.tarea+"  "+index);
+        if(elemento.tarea==nombreTarea){
+            //console.log(arrayTareas);
+            arrayTareas.splice(index,1);
+            //console.log(arrayTareas);
+        }
+    });
+    GuaradarBD();
+}
+
+function editarDB(nombreTarea){
+    for(var i=0;i<arrayTareas.length;i++){
+        if(arrayTareas[i].tarea===nombreTarea){
+            arrayTareas[i].estado=true;
+        }
+    }
+    GuaradarBD();
 }
