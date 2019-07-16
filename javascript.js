@@ -33,6 +33,44 @@ function GuaradarBD(){
     localStorage.setItem('tareas',JSON.stringify(arrayTareas));
     MostrarBD();
 }
+document.addEventListener('DOMContentLoaded',MostrarBD);
 function MostrarBD(){
-    console.log(localStorage.getItem('tareas'));
+    listaTareas.innerHTML="";
+    //console.log(localStorage.getItem('tareas'));
+    arrayTareas=JSON.parse(localStorage.getItem('tareas'));
+    for(var i=0;i<arrayTareas.length;i++){
+        if(arrayTareas[i].estado===true){
+            listaTareas.innerHTML+=`
+            <div class="alert alert-primary" role="alert">
+                <i class="fa fa-list" aria-hidden="true"></i>
+                <strong>${arrayTareas[i].tarea}</strong>--${arrayTareas[i].estado}
+                <span class="float-right">
+                <i class="fa fa-check ml-3" aria-hidden="true"></i>
+                <i class="fa fa-trash" aria-hidden="true"></i>
+                </span>
+            </div>
+            `;
+        }
+        else{
+            listaTareas.innerHTML+=`
+            <div class="alert alert-danger" role="alert">
+                <i class="fa fa-list" aria-hidden="true"></i>
+                <strong>${arrayTareas[i].tarea}</strong>--${arrayTareas[i].estado}
+                <span class="float-right">
+                <i class="fa fa-check ml-3" aria-hidden="true"></i>
+                <i class="fa fa-trash" aria-hidden="true"></i>
+                </span>
+            </div>
+            `;
+        }
+    }
+}
+listaTareas.onclick=function(e){
+    e.preventDefault();
+    //console.log(e.target.classList[1]);
+    if(e.target.classList[1]==="fa-check"  || e.target.classList[1]==="fa-trash"  ){
+        //console.log(e.target.classList[1]);
+        let nombreTarea=e.target.parentNode.parentNode.querySelector('strong').innerHTML;
+        console.log(nombreTarea);
+    }
 }
